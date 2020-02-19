@@ -6,9 +6,9 @@ public class Programa1 {
 		
 		Integer[] lista = new Integer[10];
 		
-		lista[0] = 5; // unboxing
+		lista[0] = 5; // boxing
 		
-		int valor = lista[0]; // boxing
+		int valor = lista[0]; // unboxing
 		
 		System.out.println(valor ==  lista[0]);
 	}
