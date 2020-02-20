@@ -3,6 +3,7 @@ package com.mitocode.ejercicio9.colecciones;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Programa3 {
@@ -10,35 +11,33 @@ public class Programa3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		List<String> lista = new ArrayList<>();
+		LinkedList<String> lista = new LinkedList<>();
 		lista.add("MAGENTA");
 		lista.add("ROJO");
 		lista.add("BLANCO");
 		lista.add("AZUL");
 		lista.add("CYAN");
 		
-		List<String> listaEliminar = new ArrayList<>();
+		System.out.println("Colores: ");
+		for (String color : lista) {
+			System.out.print(color + " ");
+		}
+		
+		LinkedList<String> listaEliminar = new LinkedList<>();
 		listaEliminar.add("ROJO");
 		listaEliminar.add("BLANCO");
 		listaEliminar.add("AZUL");
 		
-		Iterator<String> itetaror = lista.iterator();
-		while (itetaror.hasNext()) {
-			if (lista.contains(itetaror.next())) {
-				itetaror.remove();
-			}
+		System.out.println("\nElementos a eliminar: ");
+		for (String color : listaEliminar) {
+			System.out.print(color + " ");
 		}
-		System.out.println(lista.size());
-		System.out.println(listaEliminar.size());
 		
+		System.out.println();
+		eliminar(lista, listaEliminar);
 		for (String color : lista) {
 			System.out.println(color);
 		}
-		
-//		eliminar(lista, listaEliminar);
-//		for (String color : lista) {
-//			System.out.println(color);
-//		}
 		
 	}
 	
@@ -50,6 +49,10 @@ public class Programa3 {
 				iterator.remove();
 			}
 		}
+	}
+	
+	public static int sumar(Integer x, Integer y) {
+		return x + y;
 	}
 
 }
